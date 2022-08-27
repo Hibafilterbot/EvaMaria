@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🐳[{get_size(file.file_size)}] {file.file_name}🐳", callback_data=f'files#{file.file_id}'
+                    text=f"🐳[{get_size(file.file_size)}]🐳 {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -404,13 +404,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/+yvxJ0OnUUDs3NzRl')
+            InlineKeyboardButton('🎭ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ🎭', url='https://t.me/moviesclubz77') 
+            InlineKeyboardButton('💐ʙᴏᴛ ᴏᴡɴᴇʀ💐',url='https://t.me/moviesclubowne') 
         ], [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/+yvxJ0OnUUDs3NzRl')
+        ], [
+            InlineKeyboardButton('ℹ️ ʜᴇʟᴘs', callback_data='help'),
+            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
