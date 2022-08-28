@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🐳[{get_size(file.file_size)}]🐳 {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"🐬[{get_size(file.file_size)}]🐬 {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -73,10 +73,10 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🐳{file.file_name}🐳", callback_data=f'files#{file.file_id}'
+                    text=f"🐬{file.file_name}🐬", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"🐳{get_size(file.file_size)}🐳",
+                    text=f"🐬{get_size(file.file_size)}🐬",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
@@ -407,12 +407,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🎭ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ🎭', url='https://t.me/moviesclubz77'),
-            InlineKeyboardButton('✨ʙᴏᴛ ᴏᴡɴᴇʀ✨',url='https://t.me/+yvxJ0OnUUDs3NzRl') 
+            InlineKeyboardButton('✨ʙᴏᴛ ᴏᴡɴᴇʀ✨',url='https://t.me/moviesclubowne') 
         ], [
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/+yvxJ0OnUUDs3NzRl')
         ], [
-            InlineKeyboardButton('ℹ️ ʜᴇʟᴘs', callback_data='help'),
+            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -653,11 +653,11 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🐳{file.file_name}🐳",
+                    text=f"🐬{file.file_name}🐬",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"🐳{get_size(file.file_size)}🐳",
+                    text=f"🐬{get_size(file.file_size)}🐬",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
